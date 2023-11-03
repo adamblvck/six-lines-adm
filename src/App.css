@@ -1,38 +1,102 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  width: 100vw;
+  height: 100vw;
+
+  
 }
+
+@import url('https://fonts.googleapis.com/css?family=Nunito|Lato');
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: rgb(30,34,41);
+}
+
+/* App.css */
+.hexagram {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Add your styles to place the spheres in hexagram shape */
+}
+
+.sphere {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: rgb(89,178,200);
+  background: linear-gradient(153deg, rgba(89,178,200,1) 0%, rgba(112,142,185,1) 72%, rgba(137,102,169,1) 100%);
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  /* Add your styles for the circular DIVs */
+}
+
+.sphere div {
+  color: #eee;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 25px;
+  /* Add more styles for your modal here */
+}
+
+/* Continue styling your modal and the rest of your components */
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hexagram {
+  position: relative;
+  width: 500px; /* Set as needed */
+  height: 500px; /* Set as needed */
+  margin: auto;
+}
+
+.modal-title {
+  text-align: center;
+  margin: 10px;
+}
+
+.modal-line {
+  text-align: center;
+  margin: 0px;
+}
+
+.sphere {
+  position: absolute;
+  transform: translate(-50%, -50%); /* Center the spheres */
+  /* ... other styles ... */
+}
+
+.title {
+  font: 'Nunito';
+  font-size: 18px;
+}
+
+.details {
+  font: 'Nunito';
+  font-size: 12px;
 }
